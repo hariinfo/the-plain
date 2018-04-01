@@ -65,6 +65,7 @@ unseal is a one time process as long as your backend does not change.
 
 Now, let us unseal by running this command twice, provide atleast two unique unseal key from the init operation
 
+## Blockquote
 vault operator unseal
 
 Unseal Key (will be hidden):
@@ -73,9 +74,14 @@ Unseal Key (will be hidden):
 Login, by making use of Root token that was generated during init process
 
 
+## Blockquote
 vault login <Root Key>
+
 Now , let us run commands to store and retrieve key/value sercrets
+
+## Blockquote
 vault.exe write secret/my-app/s3password value=s3qwqwq
 vault.exe read secret/my-app/s3password
+
 You may also login from the UI and navigate to view the stored key/values
-http://localhost:8500/ui/
+[http://localhost:8500/ui/](http://localhost:8500/ui/)
