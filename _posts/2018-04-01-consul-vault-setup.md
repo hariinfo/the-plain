@@ -17,7 +17,7 @@ Consul Setup -
 write a shell or batch file with following command
 E.g. consul_start.bat with following content
 
-## Blockquote
+## Consul Startup command
 > consul agent -ui -server -data-dir mydata -advertise 127.0.0.1 -bootstrap-expect 1
 
 Vault Setup -
@@ -28,7 +28,7 @@ E.g. consul_start.bat with following content
 > vault server -config=vault-example.hcl
 ```
 
-## Blockquote
+## Vaut Configuration
 vault-example.hcl content
 backend "consul" {
  address="127.0.0.1:8500"
@@ -65,7 +65,7 @@ unseal is a one time process as long as your backend does not change.
 
 Now, let us unseal by running this command twice, provide atleast two unique unseal key from the init operation
 
-## Blockquote
+## Unseal Vault Command
 vault operator unseal
 
 Unseal Key (will be hidden):
@@ -74,12 +74,12 @@ Unseal Key (will be hidden):
 Login, by making use of Root token that was generated during init process
 
 
-## Blockquote
+## Vault Login Command
 vault login <Root Key>
 
 Now , let us run commands to store and retrieve key/value sercrets
 
-## Blockquote
+## Vault Command to encrypt and decrypt
 vault.exe write secret/my-app/s3password value=s3qwqwq
 vault.exe read secret/my-app/s3password
 
