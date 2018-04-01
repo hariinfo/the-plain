@@ -8,10 +8,10 @@ I would like to cover a quick and simple setup of Consul and Vault for learning 
 
 <div class="divider"></div>
 
-Download the proper package for OS and architecture from
+Download the proper package for you OS and the architecture from
 
-Download Consul https://www.consul.io/downloads.html
-Download Vault https://www.vaultproject.io/downloads.html
+Download Consul [https://www.consul.io/downloads.html](https://www.consul.io/downloads.html)
+Download Vault [https://www.vaultproject.io/downloads.html](https://www.vaultproject.io/downloads.html)
 
 Consul Setup -
 write a shell or batch file with following command
@@ -23,8 +23,12 @@ E.g. consul_start.bat with following content
 Vault Setup -
 write a shell or batch file with following command
 E.g. consul_start.bat with following content
-## Blockquote
+## Code Blocks
+```shell
 > vault server -config=vault-example.hcl
+```
+
+## Blockquote
 vault-example.hcl content
 backend "consul" {
  address="127.0.0.1:8500"
@@ -35,6 +39,7 @@ listener "tcp" {
   tls_disable = 1
 }
 disable_mlock = true
+
 
 C:\_workarea_\tools\vault_0.9.5_windows_amd64>vault operator init
 [0;31mError initializing: Put https://127.0.0.1:8200/v1/sys/init: http: server gave HTTP response to HTTPS client [0m
