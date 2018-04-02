@@ -28,18 +28,19 @@ E.g. consul_start.bat with following content
 > vault server -config=vault-example.hcl
 ```
 
-## Vaut Configuration
-> vault-example.hcl content
-> backend "consul" {
-> address="127.0.0.1:8500"
-> path="vault"
-> }
-> listener "tcp" {
->  address = "127.0.0.1:8200"
->  tls_disable = 1
-> }
-> disable_mlock = true
-
+## Code Blocks
+```javascript
+ vault-example.hcl content
+ backend "consul" {
+ address="127.0.0.1:8500"
+ path="vault"
+ }
+ listener "tcp" {
+  address = "127.0.0.1:8200"
+  tls_disable = 1
+ }
+ disable_mlock = true
+```
 
 C:\_workarea_\tools\vault_0.9.5_windows_amd64>vault operator init
 [0;31mError initializing: Put https://127.0.0.1:8200/v1/sys/init: http: server gave HTTP response to HTTPS client [0m

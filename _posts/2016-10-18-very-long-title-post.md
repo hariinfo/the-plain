@@ -1,138 +1,85 @@
 ---
-title: For Example of very Long Title Would Be Typography Elements in One
-updated: 2016-10-18 23:37
+title: Working with HSQLDB and Hybris
+updated: 2015-10-22 23:37
 ---
 
-**NOTE:** This markdown cheatsheet is a typography demo for this theme. Check out this post to learn more about this markdown usage when you want to get started with this theme. Enjoy!
+## Synopsis
 
-## Typography Elements in One
+Hybris by default includes HSQLDB as the embedded DB for development mode, Out of the box option to query database includes running Flex or SQL query from the admin console.
+In this blog we explore few other convenience options to query the database by making use of external SQL clients, we further explore the option of configuring Hybris with a standalone version of HSQL server
 
-Let's start with a informative paragraph. **This text is bolded.** But not this one! _How about italic text?_ Cool right? Ok, let's **_combine_** them together. Yeah, that's right! I have code to highlight, so `ThisIsMyCode()`. What a nice! Good people will hyperlink away, so [here we go](#) or [http://www.example.com](http://www.example.com).
-
+Hybris Version: 5.6.0.2
+HSQL DB Version: 2.2.9
 <div class="divider"></div>
 
-## Headings H1 to H6
 
-# H1 Heading
+## Embedded Database
 
-## H2 Heading
+By default hybris creates embedded database data file at ~/hybris5602/hybris/data/hsqldb/ , the data file name is mydb
+We will provide this information while connecting from SQuirrel SQL Client or any other client of your choice.
 
-### H3 Heading
+jdbc:hsqldb:file:~/hybris5602/hybris/data/hsqldb/mydb;readonly=true
 
-#### H4 Heading
 
-##### H5 Heading
+## Standalone database server
 
-###### H6 Heading
+Download supported version of HSQL from http://sourceforge.net/projects/hsqldb/files/latest/download?source=typ_redirect 
+You may refer following WIKI link to verify the supported version of DB https://wiki.hybris.com/display/release5/Third-Party+Compatibility+-+Release+5.0
 
-<div class="divider"></div>
+Create server.properties with following content, this configuration will create a database with the name hybris running on port 9999
 
-## Footnote
 
-Let's say you have text that you want to refer with a footnote, you can do that too! This is an example for the footnote number one [^1]. You can even add more footnotes, with link! [^2]
-
-<div class="divider"></div>
-
-## Blockquote
-
-> Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible. --Francis of Assisi
-
-**NOTE:** This theme does NOT support nested blockquotes.
-
-<div class="divider"></div>
-
-## List Items
-
-1. First order list item
-2. Second item
-
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
-
-<div class="divider"></div>
 
 ## Code Blocks
 
 ```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
+#Hybris DB configuration file
+# Databases:
+server.database.0=file:hybris/hybris
+server.dbname.0=hybrisdb
+# =====
+# Other configuration:
+# Port
+server.port=9999
+# Show stuff on the console (change this to true for production):
+server.silent=false
+# Don't show JDBC trace messages on the console:
+server.trace=false
+server.no_system_exit=false
+# Do not allow remote connections to create a database:
+server.remote_open=true
+# =====
 ```
 
 <div class="divider"></div>
 
-## Mathematics
-
-The theme comes ready with [mathjax](https://www.mathjax.org/) support built in, allowing for both simple inline equations like $$ax^2 + bx + c = 0$$ and much more complex mathematical expressions such as equation $$\eqref{eq:sample}$$ below.
-
-$$
-\begin{align}
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t}  &= \frac{4\pi}{c}\vec{\mathbf{j}} \\   
-\nabla \cdot \vec{\mathbf{E}} &= 4 \pi \rho \tag{2} \label{eq:sample}\\
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t}  &= \vec{\mathbf{0}} \\
-\nabla \cdot \vec{\mathbf{B}}  &= 0\\
-\end{align}
-$$
+HSQLDB download does not include a startup script by default for MAC OS or Unix, you may create a startup script as follows.
+#hsqldb/bin/runServer.sh
+java -cp ../lib/hsqldb.jar org.hsqldb.server.Server --props ../../datafile/server.properties
 
 <div class="divider"></div>
 
+Make the script executable chmod 777 runServer.sh
+Run the server by executing
+./runServer.sh
+This should start the new DB server on port 9999
 
-## Table
+Try connecting from SQuirrel SQL client first.
+You may use username SA and blank password to connect, however, it is recommended to make use of a non  - DBA user account.
+jdbc:hsqldb:hsql://localhost:9999/hybrisdb
 
-### Table 1: With Alignment
+Add following in the local.properties
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
 
-### Table 2: With Typography Elements
+db.url=jdbc:hsqldb:hsql://localhost:9999/hybrisdb
+db.driver=org.hsqldb.jdbcDriver
+db.username=HYBRIS
+db.password=hybris
+db.tableprefix=
+hsqldb.usecachedtables=false
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
 
-<div class="divider"></div>
+Perform ant all
+Start server and initialize to load schema and tables to the new standalone database.
+you should now be able to connect to the database using SQL Client as follows.
 
-## Horizontal Line
-
-The HTML `<hr>` element is for creating a "thematic break" between paragraph-level elements. In markdown, you can create a `<hr>` with any of the following:
-
-* `___`: three consecutive underscores
-* `---`: three consecutive dashes
-* `***`: three consecutive asterisks
-
-renders to:
-
-___
-
----
-
-***
-
-<div class="divider"></div>
-
-## Media
-
-### YouTube Embedded Iframe
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n1a7o44WxNo" frameborder="0" allowfullscreen></iframe>
-
-### Image
-
-![Minion](http://octodex.github.com/images/minion.png)
-
-[^1]: Footnote number one yeah baby! Long sentence test of footnote to see how the words are wrapping between each other. Might overflowww!
-[^2]: A footnote you can link to - [click here!](#)
