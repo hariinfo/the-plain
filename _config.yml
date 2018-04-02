@@ -17,7 +17,7 @@ github_username:    hariinfo # set to 'false' to disable
 url:                https://hariinfo.github.io # main url
 baseurl:            / # for gh-pages
 permalink:          /notes/:title # Post permalink
-timezone:           Asia/Kuala_Lumpur # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:           America/Chicago # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            true  # enables support for mathjax - set to 'false' to disable
 
 # Site Build

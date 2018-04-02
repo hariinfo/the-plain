@@ -23,14 +23,14 @@ E.g. consul_start.bat with following content
 Vault Setup -
 write a shell or batch file with following command
 E.g. consul_start.bat with following content
-## Code Blocks
+
+## consul_start.bat
 ```shell
 > vault server -config=vault-example.hcl
 ```
 
-## Code Blocks
+## vault-example.hcl content
 ```javascript
- vault-example.hcl content
  backend "consul" {
  address="127.0.0.1:8500"
  path="vault"
@@ -42,16 +42,20 @@ E.g. consul_start.bat with following content
  disable_mlock = true
 ```
 
-C:\_workarea_\tools\vault_0.9.5_windows_amd64>vault operator init
-[0;31mError initializing: Put https://127.0.0.1:8200/v1/sys/init: http: server gave HTTP response to HTTPS client [0m
+## Initialize Vault
+>vault operator init
 
+Error initializing: Put https://127.0.0.1:8200/v1/sys/init: http: server gave HTTP response to HTTPS client [0m
 The default address of the client uses https. Just set the -address parameter or set the VAULT_ADDRESS env var and you'll be good to go.
-set VAULT_ADDR=http://127.0.0.1:8200
+
+## Set Vault Address
+>set VAULT_ADDR=http://127.0.0.1:8200
 vault operator init -key-shares=5 -key-threshold=2
 
 -key-threshold - This defines the number of keys required to unseal vault
 -key-shares - This defines number of keys that should be generated during initialization
 
+## Sample Output
 [0;0mUnseal Key 1: 45MbjNghzYmFjaagC5Fcx4qj5E2jOl5ZWYByFctXV+T3 [0m
 [0;0mUnseal Key 2: Z/TffCSL0mUw4NbMbHpf0dEjGge5iSZja6C7dEoY1AP1 [0m
 [0;0mUnseal Key 3: C5YvqiPS20VgtiPPDuqgEwsAt6+qPE0+qO7P8zyqCEJf [0m
