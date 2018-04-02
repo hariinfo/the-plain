@@ -14,15 +14,13 @@ Download Consul [https://www.consul.io/downloads.html](https://www.consul.io/dow
 Download Vault [https://www.vaultproject.io/downloads.html](https://www.vaultproject.io/downloads.html)
 
 Consul Setup -
-write a shell or batch file with following command
-E.g. consul_start.bat with following content
+write a shell or batch file with following command E.g. consul_start.bat with following content
 
 ## Consul Startup command
 > consul agent -ui -server -data-dir mydata -advertise 127.0.0.1 -bootstrap-expect 1
 
 Vault Setup -
-write a shell or batch file with following command
-E.g. consul_start.bat with following content
+write a shell or batch file with following command E.g. consul_start.bat with following content
 
 ## consul_start.bat
 ```shell
@@ -65,13 +63,12 @@ vault operator init -key-shares=5 -key-threshold=2
 [0;0mInitial Root Token: 4360d91f-cf9d-a33f-45ca-2bdc699caef1 [0m
 
 Make a note of at least two Unseal keys and your root keys
-
 unseal is a one time process as long as your backend does not change.
 
 Now, let us unseal by running this command twice, provide atleast two unique unseal key from the init operation
 
 ## Unseal Vault Command
-vault operator unseal
+>vault operator unseal
 
 Unseal Key (will be hidden):
 
@@ -80,12 +77,12 @@ Login, by making use of Root token that was generated during init process
 
 
 ## Vault Login Command
-vault login <Root Key>
+>vault login <Root Key>
 
 Now , let us run commands to store and retrieve key/value sercrets
 
 ## Vault Command to encrypt and decrypt
-vault.exe write secret/my-app/s3password value=s3qwqwq
+>vault.exe write secret/my-app/s3password value=s3qwqwq
 vault.exe read secret/my-app/s3password
 
 You may also login from the UI and navigate to view the stored key/values
