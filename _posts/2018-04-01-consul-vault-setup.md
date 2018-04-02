@@ -29,16 +29,16 @@ E.g. consul_start.bat with following content
 ```
 
 ## Vaut Configuration
-vault-example.hcl content
-backend "consul" {
- address="127.0.0.1:8500"
- path="vault"
-}
-listener "tcp" {
-  address = "127.0.0.1:8200"
-  tls_disable = 1
-}
-disable_mlock = true
+> vault-example.hcl content
+> backend "consul" {
+> address="127.0.0.1:8500"
+> path="vault"
+> }
+> listener "tcp" {
+>  address = "127.0.0.1:8200"
+>  tls_disable = 1
+> }
+> disable_mlock = true
 
 
 C:\_workarea_\tools\vault_0.9.5_windows_amd64>vault operator init
