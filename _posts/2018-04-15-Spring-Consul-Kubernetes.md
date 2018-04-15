@@ -80,7 +80,7 @@ as follows
 ```
 minikube service service-c --url
 ```
-Visit http://<Spring Boot URL>/getKV in your web browser.
+Visit [http://<Spring Boot URL>/getKV] (http://<Spring Boot URL>/getKV) in your web browser.
 You should now see the KV value that you entered from Consul UI
 
 
