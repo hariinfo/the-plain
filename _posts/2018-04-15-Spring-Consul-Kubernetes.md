@@ -6,6 +6,7 @@ categories: Open Source
 ---
 
 ## Synopsis
+---
 In this post, I will walk through an example to demonstrate the usage of
 Spring boot and Consul in the Kubernetes environment
 
@@ -16,9 +17,10 @@ The logical view for this setup is quite simple and can be tested both in Miniku
 and Kubernetes on the Cloud.
 
 Code example for this blog is available here.
-https://github.com/hariinfo/service-c
+[https://github.com/hariinfo/service-c](https://github.com/hariinfo/service-c)
 
 ## Logical view
+---
 
 ```
 ------- POD 1 --------------------    ------- POD 2 ----------------------
