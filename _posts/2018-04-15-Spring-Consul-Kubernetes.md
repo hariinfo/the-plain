@@ -16,6 +16,7 @@ The logical view for this setup is quite simple and can be tested both in Miniku
 and Kubernetes on the Cloud.
 
 Code example for this blog is available here.
+https://github.com/hariinfo/service-c
 
 ## Logical view
 
