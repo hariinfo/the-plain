@@ -16,9 +16,7 @@ This blog post is a summary of my learning path and experience with
 ## Reference Material
 1. Linux Academy course material - This is by far the most comprehensive material for certification prep
 [https://linuxacademy.com/linux/training/course/name/google-cloud-platform-architect-essentials](https://linuxacademy.com/linux/training/course/name/google-cloud-platform-architect-essentials)
-
 [https://linuxacademy.com/linux/training/course/name/google-certified-professional-cloud-architect-part-2](https://linuxacademy.com/linux/training/course/name/google-certified-professional-cloud-architect-part-2)
-
 [https://linuxacademy.com/linux/training/course/name/google-certified-professional-cloud-architect-part3](https://linuxacademy.com/linux/training/course/name/google-certified-professional-cloud-architect-part3)
 
 2. Google Case Studies
@@ -27,6 +25,6 @@ Read these case studies multiple times as you will get various scenario based qu
 [https://cloud.google.com/certification/guides/cloud-architect/#sample-case-study](https://cloud.google.com/certification/guides/cloud-architect/#sample-case-study)
 
 3. Free !! Mock readiness exam by google
-Take this few weeks before your exam date
+Take this couple of weeks prior to your exam date
 [https://cloud.google.com/certification/practice-exam/cloud-architect](https://cloud.google.com/certification/practice-exam/cloud-architect)
 
