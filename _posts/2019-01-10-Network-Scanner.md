@@ -6,7 +6,7 @@ date: 2019-01-10
 
 ## Synopsis
 I recently completed setup of [raspberry pi](https://www.raspberrypi.org/) file server in my home network. In this process, I had to open up couple of ports to access my file server from public domain. I was actively looking for an open source network scanner to ensure I did not create vulanarability within my home network by opening up these ports to the internet.
-In this blog I would like to talk about one such tool that comes in pretty handy to perform a network scan to identify network security vulnerabilities
+In this blog, I would like to talk about one such tool that comes in pretty handy to perform a network scan to identify network security vulnerabilities.
 
 
 ## Introduction
@@ -15,7 +15,7 @@ I will walk you through the setup and scanning of my raspberry pi server in this
 
 ## Setup
 This is pretty startight forward, download the binaries from this location
-https://nmap.org/download.html
+[https://nmap.org/download.html](https://nmap.org/download.html)
 and follow the details based on your target platform.
 
 ## Configuration and Scanner 
