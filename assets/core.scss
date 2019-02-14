@@ -4,3 +4,8 @@
 
 @import 'main';
 @import 'syntax';
+@import "{{ site.theme }}";
+
+.inner {
+  max-width: 75%;
+}
