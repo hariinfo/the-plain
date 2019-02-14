@@ -107,8 +107,3 @@ find $backup_path/$HOSTNAME.*.img -mtime +$retention_days -type f -delete
 
 ```
 
-
-
-
-
-## Configuration and Scanner 
