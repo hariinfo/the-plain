@@ -10,7 +10,7 @@ Have you seen some of those beuatiful terminal setups in presentations. Do you w
 from this
 ![Old Bash](/assets/bash/old_bash.png)
 
-This blog shall beautification of bash on Ubuntu 19
+This blog shall cover beautification of bash on Ubuntu 19
 
 ## Installation
 Step 1: Install Oh-My-ZSH 
@@ -19,10 +19,12 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ```
 
 Step 2: Install a Powerline Font
+Follow the instructions from here
+
 ``` shell
 https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation
 ```
-
+Execute these commands to install the fonts
 ``` shell
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
@@ -33,7 +35,7 @@ mkdir -p ~/.config/fontconfig/conf.d/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 ```
 
-Next, we need to download a bunch of fonts
+Next, we need to download a bunch of additional fonts
 
 ``` shell
 > git clone https://github.com/gabrielelana/awesome-terminal-fonts.git
