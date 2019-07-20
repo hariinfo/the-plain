@@ -5,7 +5,7 @@ date: 2019-07-13
 ---
 
 ## Introduction
-Have you seen some of those beuatiful terminal setups in presentations. Do you want your bash to look like this
+Have you seen some of those beautiful terminal setups in the presentations. Do you want to change your bash to this
 ![New Bash](/assets/bash/new_bash.png)
 from this
 ![Old Bash](/assets/bash/old_bash.png)
