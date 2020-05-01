@@ -13,12 +13,12 @@ sudo apt-get install libjpeg-dev zlib1g-dev swig
 ```
 
 ### 1.2 Optional Components
-We have to install the following components for cuckoo Web UI
+- We have to install the following components for cuckoo Web UI
 
-```bash
-sudo apt-get install mongodb
-sudo apt-get install postgresql libpq-dev
-```
+    ```bash
+    sudo apt-get install mongodb
+    sudo apt-get install postgresql libpq-dev
+    ```
 
 ### 1.2 Install Virtualbox
 - Install Oracle VM on the guest machine and create an instance of Windows 7 or 10
