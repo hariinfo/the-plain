@@ -54,6 +54,6 @@ sudo apt-get install postgresql libpq-dev
     cuckoo web runserver 127.0.0.1:8080
     ```
 ## 4. Credits
-https://cuckoosandbox.org/
-https://yojimbosecurity.ninja/setting-up-cuckoo/
-https://gist.github.com/braimee/bf570a62f53f71bad1906c6e072ce993
+<https://cuckoosandbox.org/>
+<https://yojimbosecurity.ninja/setting-up-cuckoo/>
+<https://gist.github.com/braimee/bf570a62f53f71bad1906c6e072ce993>
