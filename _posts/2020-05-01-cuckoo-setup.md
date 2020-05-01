@@ -32,7 +32,7 @@ sudo apt-get install postgresql libpq-dev
     ```
 - Configure Windows virtual box to use "Host-only Adapter" and "malware_net" as the Network name
 
-## 1. Install packages on the guest (Windows)
+## 2. Install packages on the guest (Windows)
 - Install python and copy the 
 - This is an optional package and enables cuckoo to collect screenshots from the guest VM
     ```bash
@@ -40,7 +40,7 @@ sudo apt-get install postgresql libpq-dev
     python -m pip install --upgrade Pillow
     ```
 
-## Run cuckoo
+## 3. Run cuckoo
 - Open a terminal and activate virtual env before launching cuckoo
     ```bash
     virtualenv venv
@@ -53,7 +53,5 @@ sudo apt-get install postgresql libpq-dev
     ```
 ## Credits
 https://cuckoosandbox.org/
-
 https://yojimbosecurity.ninja/setting-up-cuckoo/
-
 https://gist.github.com/braimee/bf570a62f53f71bad1906c6e072ce993
