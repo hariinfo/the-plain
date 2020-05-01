@@ -13,6 +13,8 @@ sudo apt-get install libjpeg-dev zlib1g-dev swig
 ```
 
 ### 1.2 Optional Components
+We have to install the following components for cuckoo Web UI
+
 ```bash
 sudo apt-get install mongodb
 sudo apt-get install postgresql libpq-dev
@@ -51,7 +53,7 @@ sudo apt-get install postgresql libpq-dev
     ```bash
     cuckoo web runserver 127.0.0.1:8080
     ```
-## Credits
+## 4. Credits
 https://cuckoosandbox.org/
 https://yojimbosecurity.ninja/setting-up-cuckoo/
 https://gist.github.com/braimee/bf570a62f53f71bad1906c6e072ce993
